@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #031427;
+  --color-on-background: #d3e4fe;
+  
+  --color-surface: #031427;
+  --color-on-surface: #d3e4fe;
+  --color-surface-variant: #26364a;
+  --color-on-surface-variant: #c6c6cd;
+  
+  --color-surface-container-lowest: #000f21;
+  --color-surface-container-low: #0b1c30;
+  --color-surface-container: #102034;
+  --color-surface-container-high: #1b2b3f;
+  --color-surface-container-highest: #26364a;
+  
+  --color-primary: #bec6e0;
+  --color-on-primary: #283044;
+  --color-primary-container: #0f172a;
+  --color-on-primary-container: #798098;
+  
+  --color-secondary: #d0bcff;
+  --color-on-secondary: #3c0091;
+  --color-secondary-container: #571bc1;
+  --color-on-secondary-container: #c4abff;
+  
+  --color-tertiary: #4edea3;
+  --color-on-tertiary: #003824;
+  --color-tertiary-container: #001c10;
+  --color-on-tertiary-container: #009365;
+
+  --font-headline-md: "Lexend", sans-serif;
+  --font-label-sm: "Manrope", sans-serif;
+  --font-label-md: "Manrope", sans-serif;
+  --font-display-lg: "Lexend", sans-serif;
+  --font-body-md: "Manrope", sans-serif;
+  --font-headline-lg: "Lexend", sans-serif;
+  --font-body-lg: "Manrope", sans-serif;
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .glass-card {
+    background: rgba(27, 43, 63, 0.4);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+  }
+  
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+body {
+  min-height: max(884px, 100dvh);
+}
