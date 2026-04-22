@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { Lock } from 'lucide-react';
 import type { ChordVariation } from '../data/chords';
 
